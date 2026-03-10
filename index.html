@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Nova — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Orbitron (display) + Sora (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- ══ PARTICLE CANVAS ══ -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ══ ANIMATED BG ORBS ══ -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+
+  <!-- ══ NAV ══ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">AN<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Events</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+    <ul class="nav-mobile" id="mobileMenu">
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#education" class="mobile-link">Education</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#experience" class="mobile-link">Events</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-photo-wrap reveal-up delay-1">
+        <div class="hero-photo-ring"></div>
+        <div class="hero-photo">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="avatar-svg">
+            <defs>
+              <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#a78bfa"/>
+                <stop offset="100%" style="stop-color:#38bdf8"/>
+              </linearGradient>
+            </defs>
+            <circle cx="60" cy="60" r="60" fill="url(#avatarGrad)" opacity="0.25"/>
+            <circle cx="60" cy="46" r="22" fill="url(#avatarGrad)" opacity="0.7"/>
+            <ellipse cx="60" cy="105" rx="35" ry="28" fill="url(#avatarGrad)" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="hero-photo-glow"></div>
+      </div>
+
+      <p class="hero-eyebrow reveal-up delay-2">Hello, World 👋</p>
+      <h1 class="hero-name reveal-up delay-3">Alex <span class="grad-text">Nova</span></h1>
+      <p class="hero-tagline reveal-up delay-4">
+        Computer Engineering Student &nbsp;·&nbsp; Tech Enthusiast &nbsp;·&nbsp; Future Innovator
+      </p>
+      <p class="hero-intro reveal-up delay-5">
+        I craft seamless digital experiences with code, curiosity, and a relentless
+        drive to push the boundaries of what technology can achieve.
+      </p>
+      <div class="hero-btns reveal-up delay-6">
+        <a href="#projects" class="btn btn-primary">
+          <i class="ph ph-folder-open"></i> View Portfolio
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <i class="ph ph-paper-plane-tilt"></i> Contact Me
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">01 — About</span>
+        <h2 class="section-title">Who <span class="grad-text">I Am</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-cards">
+          <div class="glass-card about-card reveal-left delay-1">
+            <div class="about-card-icon"><i class="ph-fill ph-rocket-launch"></i></div>
+            <h3>Passionate Builder</h3>
+            <p>I thrive on turning complex problems into elegant, user-first solutions. Every line of code is an opportunity to create something meaningful.</p>
+          </div>
+          <div class="glass-card about-card reveal-left delay-2">
+            <div class="about-card-icon"><i class="ph-fill ph-brain"></i></div>
+            <h3>Lifelong Learner</h3>
+            <p>Technology evolves at lightning speed, and so do I. I embrace every challenge as a learning opportunity, constantly expanding my knowledge.</p>
+          </div>
+          <div class="glass-card about-card reveal-left delay-3">
+            <div class="about-card-icon"><i class="ph-fill ph-lightning"></i></div>
+            <h3>Innovation Driven</h3>
+            <p>From AI to embedded systems, I explore the full tech stack. My vision: leverage engineering to solve real-world problems at scale.</p>
+          </div>
+        </div>
+        <div class="about-timeline reveal-right delay-2">
+          <h3 class="timeline-title">My Journey</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content glass-card">
+                <span class="timeline-year">2020</span>
+                <h4>First Line of Code</h4>
+                <p>Wrote my first "Hello, World!" in Python and never looked back.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content glass-card">
+                <span class="timeline-year">2021</span>
+                <h4>Web Development Deep Dive</h4>
+                <p>Built my first full-stack web app. Fell in love with the intersection of design and engineering.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content glass-card">
+                <span class="timeline-year">2022</span>
+                <h4>Diploma in Computer Engg.</h4>
+                <p>Enrolled at Government Polytechnic Jamnagar — dove deep into data structures, networking, and OS.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content glass-card">
+                <span class="timeline-year">2024</span>
+                <h4>First Hackathon Win</h4>
+                <p>Led a team of 4 to first place, building an ML-powered health monitoring system in 24 hours.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot active"></div>
+              <div class="timeline-content glass-card active-card">
+                <span class="timeline-year">Now</span>
+                <h4>Building the Future</h4>
+                <p>Pursuing advanced studies, contributing to open source, and pushing the frontier every single day.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EDUCATION ══ -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">02 — Education</span>
+        <h2 class="section-title">Academic <span class="grad-text">Path</span></h2>
+      </div>
+      <div class="edu-timeline">
+        <div class="edu-item reveal-up delay-1">
+          <div class="edu-connector"></div>
+          <div class="edu-icon"><i class="ph-fill ph-graduation-cap"></i></div>
+          <div class="glass-card edu-card">
+            <div class="edu-badge">Current</div>
+            <div class="edu-header">
+              <h3>Diploma in Computer Engineering</h3>
+              <span class="edu-institution">Government Polytechnic Jamnagar</span>
+            </div>
+            <div class="edu-meta">
+              <span><i class="ph ph-calendar-blank"></i> 2022 — Present</span>
+              <span><i class="ph ph-star"></i> CGPA: 8.7 / 10</span>
+            </div>
+            <p class="edu-desc">Comprehensive curriculum covering Data Structures &amp; Algorithms, Computer Networks, Operating Systems, Database Management, and Embedded Systems.</p>
+            <div class="edu-tags">
+              <span class="tag">Data Structures</span><span class="tag">Networks</span><span class="tag">OS</span><span class="tag">DBMS</span><span class="tag">Electronics</span>
+            </div>
+          </div>
+        </div>
+        <div class="edu-item reveal-up delay-2">
+          <div class="edu-connector"></div>
+          <div class="edu-icon"><i class="ph-fill ph-books"></i></div>
+          <div class="glass-card edu-card">
+            <div class="edu-header">
+              <h3>Higher Secondary (Science)</h3>
+              <span class="edu-institution">Gujarat Secondary Education Board</span>
+            </div>
+            <div class="edu-meta">
+              <span><i class="ph ph-calendar-blank"></i> 2020 — 2022</span>
+              <span><i class="ph ph-star"></i> Percentile: 88.5%</span>
+            </div>
+            <p class="edu-desc">Science stream with focus on Physics, Mathematics, and Chemistry. Developed strong analytical and problem-solving foundations.</p>
+            <div class="edu-tags">
+              <span class="tag">Physics</span><span class="tag">Mathematics</span><span class="tag">Chemistry</span>
+            </div>
+          </div>
+        </div>
+        <div class="edu-item reveal-up delay-3">
+          <div class="edu-icon"><i class="ph-fill ph-certificate"></i></div>
+          <div class="glass-card edu-card">
+            <div class="edu-header">
+              <h3>B.E. Computer Engineering (Upcoming)</h3>
+              <span class="edu-institution">Gujarat Technological University</span>
+            </div>
+            <div class="edu-meta">
+              <span><i class="ph ph-calendar-blank"></i> 2025 — 2028</span>
+              <span><i class="ph ph-map-pin"></i> Gujarat, India</span>
+            </div>
+            <p class="edu-desc">Planning to pursue Bachelor of Engineering in Computer Science with focus on AI, ML, and Full-Stack Development.</p>
+            <div class="edu-tags">
+              <span class="tag">AI / ML</span><span class="tag">Full Stack</span><span class="tag">Cloud</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SKILLS ══ -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">03 — Skills</span>
+        <h2 class="section-title">Tech <span class="grad-text">Arsenal</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="glass-card skill-card reveal-up delay-1">
+          <div class="skill-icon"><i class="ph-fill ph-code"></i></div>
+          <h4>HTML / CSS</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="92"></div></div>
+          <span class="skill-pct">92%</span>
+        </div>
+        <div class="glass-card skill-card reveal-up delay-2">
+          <div class="skill-icon"><i class="ph-fill ph-file-js"></i></div>
+          <h4>JavaScript</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div>
+          <span class="skill-pct">85%</span>
+        </div>
+        <div class="glass-card skill-card reveal-up delay-3">
+          <div class="skill-icon"><i class="ph-fill ph-file-py"></i></div>
+          <h4>Python</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div>
+          <span class="skill-pct">80%</span>
+        </div>
+        <div class="glass-card skill-card reveal-up delay-1">
+          <div class="skill-icon"><i class="ph-fill ph-robot"></i></div>
+          <h4>Machine Learning</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="70"></div></div>
+          <span class="skill-pct">70%</span>
+        </div>
+        <div class="glass-card skill-card reveal-up delay-2">
+          <div class="skill-icon"><i class="ph-fill ph-tree-structure"></i></div>
+          <h4>Data Structures</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div>
+          <span class="skill-pct">88%</span>
+        </div>
+        <div class="glass-card skill-card reveal-up delay-3">
+          <div class="skill-icon"><i class="ph-fill ph-puzzle-piece"></i></div>
+          <h4>Problem Solving</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div>
+          <span class="skill-pct">90%</span>
+        </div>
+        <div class="glass-card skill-card reveal-up delay-1">
+          <div class="skill-icon"><i class="ph-fill ph-git-branch"></i></div>
+          <h4>Git / GitHub</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="78"></div></div>
+          <span class="skill-pct">78%</span>
+        </div>
+        <div class="glass-card skill-card reveal-up delay-2">
+          <div class="skill-icon"><i class="ph-fill ph-database"></i></div>
+          <h4>Databases</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="72"></div></div>
+          <span class="skill-pct">72%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EXPERIENCE / EVENTS ══ -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">04 — Experience</span>
+        <h2 class="section-title">Events & <span class="grad-text">Milestones</span></h2>
+      </div>
+      <div class="exp-grid">
+        <div class="glass-card exp-card reveal-up delay-1">
+          <div class="exp-card-top">
+            <div class="exp-icon"><i class="ph-fill ph-trophy"></i></div>
+            <span class="exp-date">Mar 2024</span>
+          </div>
+          <h3>National Hackathon — 1st Place</h3>
+          <p>Led a 4-member team to build HealthPulse, an ML-powered vitals monitoring system in under 24 hours.</p>
+          <ul class="exp-outcomes">
+            <li><i class="ph ph-check-circle"></i> Real-time anomaly detection</li>
+            <li><i class="ph ph-check-circle"></i> End-to-end ML pipeline</li>
+            <li><i class="ph ph-check-circle"></i> Team leadership</li>
+          </ul>
+          <span class="exp-type">Hackathon</span>
+        </div>
+        <div class="glass-card exp-card reveal-up delay-2">
+          <div class="exp-card-top">
+            <div class="exp-icon"><i class="ph-fill ph-chalkboard-teacher"></i></div>
+            <span class="exp-date">Jan 2024</span>
+          </div>
+          <h3>AI/ML Workshop — IITB TechFest</h3>
+          <p>Attended a two-day intensive workshop covering deep learning fundamentals, neural architectures, and deployment strategies.</p>
+          <ul class="exp-outcomes">
+            <li><i class="ph ph-check-circle"></i> PyTorch hands-on labs</li>
+            <li><i class="ph ph-check-circle"></i> CNNs &amp; Transformers</li>
+            <li><i class="ph ph-check-circle"></i> Model deployment</li>
+          </ul>
+          <span class="exp-type">Workshop</span>
+        </div>
+        <div class="glass-card exp-card reveal-up delay-3">
+          <div class="exp-card-top">
+            <div class="exp-icon"><i class="ph-fill ph-lightning"></i></div>
+            <span class="exp-date">Oct 2023</span>
+          </div>
+          <h3>Smart India Hackathon 2023</h3>
+          <p>Built a Smart Waste Management IoT solution reaching state-level finals with a real government problem statement.</p>
+          <ul class="exp-outcomes">
+            <li><i class="ph ph-check-circle"></i> IoT integration</li>
+            <li><i class="ph ph-check-circle"></i> Real problem-solving</li>
+            <li><i class="ph ph-check-circle"></i> State finalist</li>
+          </ul>
+          <span class="exp-type">Competition</span>
+        </div>
+        <div class="glass-card exp-card reveal-up delay-1">
+          <div class="exp-card-top">
+            <div class="exp-icon"><i class="ph-fill ph-code-block"></i></div>
+            <span class="exp-date">Aug 2023</span>
+          </div>
+          <h3>Open Source Contribution Sprint</h3>
+          <p>Participated in Hacktoberfest — merged 8 PRs across 4 open source repositories, improving docs and fixing bugs.</p>
+          <ul class="exp-outcomes">
+            <li><i class="ph ph-check-circle"></i> 8 merged PRs</li>
+            <li><i class="ph ph-check-circle"></i> Collaboration skills</li>
+            <li><i class="ph ph-check-circle"></i> Git flow mastery</li>
+          </ul>
+          <span class="exp-type">Open Source</span>
+        </div>
+        <div class="glass-card exp-card reveal-up delay-2">
+          <div class="exp-card-top">
+            <div class="exp-icon"><i class="ph-fill ph-users-three"></i></div>
+            <span class="exp-date">May 2023</span>
+          </div>
+          <h3>Tech Talk: Web3 &amp; Blockchain</h3>
+          <p>Delivered a 30-minute session to 60+ students on blockchain fundamentals, smart contracts, and decentralized apps.</p>
+          <ul class="exp-outcomes">
+            <li><i class="ph ph-check-circle"></i> Public speaking</li>
+            <li><i class="ph ph-check-circle"></i> Blockchain concepts</li>
+            <li><i class="ph ph-check-circle"></i> Audience engagement</li>
+          </ul>
+          <span class="exp-type">Speaker</span>
+        </div>
+        <div class="glass-card exp-card reveal-up delay-3">
+          <div class="exp-card-top">
+            <div class="exp-icon"><i class="ph-fill ph-certificate"></i></div>
+            <span class="exp-date">Feb 2023</span>
+          </div>
+          <h3>Google Cloud Certifications</h3>
+          <p>Completed Google Cloud Associate Cloud Engineer and ML Engineer learning paths with distinction.</p>
+          <ul class="exp-outcomes">
+            <li><i class="ph ph-check-circle"></i> Cloud architecture</li>
+            <li><i class="ph ph-check-circle"></i> GCP ML tools</li>
+            <li><i class="ph ph-check-circle"></i> Industry credentials</li>
+          </ul>
+          <span class="exp-type">Certification</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROJECTS ══ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">05 — Projects</span>
+        <h2 class="section-title">Built <span class="grad-text">Things</span></h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card glass-card reveal-up delay-1">
+          <div class="project-inner">
+            <div class="project-front">
+              <div class="project-icon"><i class="ph-fill ph-heartbeat"></i></div>
+              <h3>HealthPulse AI</h3>
+              <p>Real-time health vitals monitoring with ML-powered anomaly detection and smart alert system.</p>
+              <div class="project-techs"><span>Python</span><span>TensorFlow</span><span>React</span><span>Flask</span></div>
+            </div>
+            <div class="project-back">
+              <h3>HealthPulse AI</h3>
+              <p>End-to-end health monitoring platform using LSTM neural networks to detect abnormal heart rate patterns with 94% accuracy.</p>
+              <div class="project-links">
+                <a href="#" class="btn btn-sm"><i class="ph ph-github-logo"></i> GitHub</a>
+                <a href="#" class="btn btn-sm btn-alt"><i class="ph ph-arrow-square-out"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card glass-card reveal-up delay-2">
+          <div class="project-inner">
+            <div class="project-front">
+              <div class="project-icon"><i class="ph-fill ph-recycle"></i></div>
+              <h3>SmartBin IoT</h3>
+              <p>IoT-enabled smart waste management system with live fill-level tracking and optimal routing.</p>
+              <div class="project-techs"><span>Arduino</span><span>Node.js</span><span>MQTT</span><span>Maps API</span></div>
+            </div>
+            <div class="project-back">
+              <h3>SmartBin IoT</h3>
+              <p>Ultrasonic sensors push data to a cloud dashboard. Notifies municipalities when bins are 80%+ full, reducing collection trips by 40%.</p>
+              <div class="project-links">
+                <a href="#" class="btn btn-sm"><i class="ph ph-github-logo"></i> GitHub</a>
+                <a href="#" class="btn btn-sm btn-alt"><i class="ph ph-arrow-square-out"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card glass-card reveal-up delay-3">
+          <div class="project-inner">
+            <div class="project-front">
+              <div class="project-icon"><i class="ph-fill ph-chat-teardrop-text"></i></div>
+              <h3>StudyBot LLM</h3>
+              <p>A RAG-based AI study assistant that answers questions from your own PDF textbooks and notes.</p>
+              <div class="project-techs"><span>Python</span><span>LangChain</span><span>OpenAI</span><span>ChromaDB</span></div>
+            </div>
+            <div class="project-back">
+              <h3>StudyBot LLM</h3>
+              <p>Upload any PDF; the bot chunks, embeds, and retrieves relevant context before generating precise answers. Students reported 2× faster revision.</p>
+              <div class="project-links">
+                <a href="#" class="btn btn-sm"><i class="ph ph-github-logo"></i> GitHub</a>
+                <a href="#" class="btn btn-sm btn-alt"><i class="ph ph-arrow-square-out"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card glass-card reveal-up delay-1">
+          <div class="project-inner">
+            <div class="project-front">
+              <div class="project-icon"><i class="ph-fill ph-storefront"></i></div>
+              <h3>NeoStore</h3>
+              <p>Full-stack e-commerce platform with JWT auth, cart system, Razorpay payments, and admin dashboard.</p>
+              <div class="project-techs"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Razorpay</span></div>
+            </div>
+            <div class="project-back">
+              <h3>NeoStore</h3>
+              <p>Complete commerce solution: product catalog, real-time inventory, JWT auth, and a React admin panel for order and product management.</p>
+              <div class="project-links">
+                <a href="#" class="btn btn-sm"><i class="ph ph-github-logo"></i> GitHub</a>
+                <a href="#" class="btn btn-sm btn-alt"><i class="ph ph-arrow-square-out"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card glass-card reveal-up delay-2">
+          <div class="project-inner">
+            <div class="project-front">
+              <div class="project-icon"><i class="ph-fill ph-chart-line-up"></i></div>
+              <h3>StockSage</h3>
+              <p>ML stock price predictor using LSTM + technical indicators, with interactive Plotly charts.</p>
+              <div class="project-techs"><span>Python</span><span>LSTM</span><span>Plotly</span><span>yFinance</span></div>
+            </div>
+            <div class="project-back">
+              <h3>StockSage</h3>
+              <p>Combines 15+ technical indicators with an LSTM model trained on 5 years of historical data to forecast next-day prices with precision.</p>
+              <div class="project-links">
+                <a href="#" class="btn btn-sm"><i class="ph ph-github-logo"></i> GitHub</a>
+                <a href="#" class="btn btn-sm btn-alt"><i class="ph ph-arrow-square-out"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card glass-card reveal-up delay-3">
+          <div class="project-inner">
+            <div class="project-front">
+              <div class="project-icon"><i class="ph-fill ph-eye"></i></div>
+              <h3>VisionSign</h3>
+              <p>Real-time sign language interpreter using CNN + webcam, converting gestures to text and speech.</p>
+              <div class="project-techs"><span>Python</span><span>OpenCV</span><span>PyTorch</span><span>TTS</span></div>
+            </div>
+            <div class="project-back">
+              <h3>VisionSign</h3>
+              <p>A CNN trained on 87k images recognizes 26 ASL letters in real-time via webcam with 91% accuracy and synthesises speech for accessibility.</p>
+              <div class="project-links">
+                <a href="#" class="btn btn-sm"><i class="ph ph-github-logo"></i> GitHub</a>
+                <a href="#" class="btn btn-sm btn-alt"><i class="ph ph-arrow-square-out"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SOCIAL ══ -->
+  <section id="social" class="section section-narrow">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">06 — Connect</span>
+        <h2 class="section-title">Find Me <span class="grad-text">Online</span></h2>
+      </div>
+      <div class="social-row reveal-up delay-2">
+        <a href="#" class="glass-card social-btn" target="_blank" rel="noopener">
+          <i class="ph-fill ph-instagram-logo"></i><span>Instagram</span>
+          <div class="social-glow"></div>
+        </a>
+        <a href="#" class="glass-card social-btn" target="_blank" rel="noopener">
+          <i class="ph-fill ph-linkedin-logo"></i><span>LinkedIn</span>
+          <div class="social-glow"></div>
+        </a>
+        <a href="#" class="glass-card social-btn" target="_blank" rel="noopener">
+          <i class="ph-fill ph-github-logo"></i><span>GitHub</span>
+          <div class="social-glow"></div>
+        </a>
+        <a href="#" class="glass-card social-btn" target="_blank" rel="noopener">
+          <i class="ph-fill ph-twitter-logo"></i><span>Twitter / X</span>
+          <div class="social-glow"></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">07 — Contact</span>
+        <h2 class="section-title">Let's <span class="grad-text">Talk</span></h2>
+        <p class="section-sub">Have a project in mind, or just want to say hi? I'm always open to new conversations.</p>
+      </div>
+      <div class="contact-wrap">
+        <div class="glass-card contact-form-card reveal-left delay-1">
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="femail">Email</label>
+                <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fsocial">Social Link <span class="optional">(optional)</span></label>
+              <input type="url" id="fsocial" name="social" placeholder="https://linkedin.com/in/..." />
+            </div>
+            <div class="form-group">
+              <label for="fmessage">Message</label>
+              <textarea id="fmessage" name="message" rows="5" placeholder="Write your message…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width">
+              <i class="ph ph-paper-plane-tilt"></i> Send Message
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon"><i class="ph-fill ph-check-circle"></i></div>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+            <button class="btn btn-ghost" id="resetFormBtn">Send Another</button>
+          </div>
+        </div>
+        <div class="contact-info reveal-right delay-2">
+          <div class="glass-card contact-info-card">
+            <h3>Get in Touch</h3>
+            <div class="info-item"><i class="ph-fill ph-envelope"></i><span>alexnova@email.com</span></div>
+            <div class="info-item"><i class="ph-fill ph-map-pin"></i><span>Jamnagar, Gujarat, India</span></div>
+            <div class="info-item"><i class="ph-fill ph-clock"></i><span>Available Mon–Sat, 9AM–8PM IST</span></div>
+            <hr class="divider" />
+            <p class="info-note">Open to internships, freelance projects, collaborations, and full-time opportunities.</p>
+          </div>
+          <div class="glass-card visitor-card">
+            <div class="visitor-inner">
+              <i class="ph-fill ph-eye"></i>
+              <div>
+                <span class="visitor-label">Total Visitors</span>
+                <span class="visitor-count" id="visitorCount">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer id="footer">
+    <div class="footer-glow"></div>
+    <div class="container footer-inner">
+      <a href="#hero" class="footer-logo">AN<span class="dot">.</span></a>
+      <p class="footer-copy">© 2025 Alex Nova. Crafted with ♥ &amp; curiosity.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="ph-fill ph-linkedin-logo"></i></a>
+        <a href="#" aria-label="GitHub"><i class="ph-fill ph-github-logo"></i></a>
+      </div>
+    </div>
+    <a href="#hero" class="back-top" id="backTop" aria-label="Back to top">
+      <i class="ph ph-arrow-up"></i>
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
