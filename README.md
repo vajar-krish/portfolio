@@ -1,93 +1,85 @@
-# 🚀 Krish Vajar – Futuristic Developer Portfolio
+# 🚀 Krish Vajar – Developer Portfolio
 
-A modern **glassmorphism inspired portfolio website** built using HTML, CSS and JavaScript with advanced UI animations and smooth user experience.
-
-This portfolio showcases my **projects, skills, education, achievements and technical journey** as a Computer Engineering student.
+A modern futuristic portfolio website built using **HTML, CSS and JavaScript** with smooth animations and glassmorphism UI design.
 
 ---
 
-# 🌐 Live Portfolio
-(Deploy on GitHub Pages or Netlify)
+## ✨ Features
 
-Example:
-https://your-username.github.io/portfolio
-
----
-
-# ✨ Features
-
-• Futuristic Glassmorphism UI  
-• Animated Particle Background  
-• Smooth Scroll Animations  
-• Interactive Project Cards (Flip Animation)  
-• Responsive Navigation Menu  
-• Skills Progress Visualization  
-• Timeline Based Education Section  
-• Hackathons & Achievements Showcase  
-• Social Media Integration  
-• Contact Form Interface  
+• Glassmorphism UI Design
+• Animated Particle Background
+• Interactive Project Cards
+• Smooth Scroll Animations
+• Skills Progress Visualization
+• Timeline Based Education Section
+• Hackathon & Event Showcase
+• Social Media Integration
+• Contact Form UI
 
 ---
 
-# 🧠 Sections Included
+## 🛠 Tech Stack
 
-### 👤 Hero Section
-Introduction with animated avatar and modern UI.
+Frontend
 
-### 🧑‍💻 About Section
-Overview of my journey and passion for technology.
+* HTML5
+* CSS3
+* JavaScript
 
-### 🎓 Education
-Timeline based education history.
+Design
 
-### ⚡ Skills
-Technical skills visualized using animated progress bars.
+* Glassmorphism UI
+* CSS Animations
+* Responsive Layout
 
-### 🏆 Experience & Events
-Hackathons, workshops and technical milestones.
+Libraries
 
-### 🚀 Projects
-Interactive flip cards displaying project details.
-
-### 🌍 Social Links
-Quick access to GitHub, LinkedIn and Instagram.
-
-### 📩 Contact
-Contact form UI for collaboration or communication.
+* Google Fonts
+* Phosphor Icons
 
 ---
 
-# 🛠 Tech Stack
+## 📂 Project Structure
 
-Frontend:
-- HTML5
-- CSS3
-- JavaScript
-
-Design:
-- Glassmorphism UI
-- CSS Animations
-- Responsive Layout
-
-Libraries:
-- Phosphor Icons
-- Google Fonts
-
----
-
-# 📂 Project Structure
+```
 portfolio
 │
 ├── index.html
 ├── style.css
 ├── script.js
-│
-└── assets
-└── images
+```
 
+---
 
-👨‍💻 Author
+## 🚀 Installation
+
+Clone the repository
+
+```
+git clone https://github.com/vajar-krish/krish-portfolio.git
+```
+
+Open project
+
+```
+cd krish-portfolio
+```
+
+Run project
+
+```
+index.html
+```
+
+---
+
+## 👨‍💻 Author
+
 Krish Vajar
 Computer Engineering Student
-Technology Enthusiast 
 
+GitHub
+https://github.com/vajar-krish
+
+Instagram
+https://www.instagram.com/krish.vajar
