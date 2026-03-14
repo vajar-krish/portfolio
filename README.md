@@ -1,71 +1,24 @@
-# 🚀 Krish Vajar – Futuristic Developer Portfolio
+# 🚀 Krish Vajar – Developer Portfolio
 
-A modern **developer portfolio website** built using **HTML, CSS and JavaScript** featuring advanced animations, glassmorphism UI and interactive project showcase.
-
-This portfolio represents my journey as a **Computer Engineering student**, highlighting my skills, projects, hackathons and technical achievements.
+A modern futuristic portfolio website built using **HTML, CSS and JavaScript** with smooth animations and glassmorphism UI design.
 
 ---
 
-# 🌐 Live Portfolio
+## ✨ Features
 
-After deploying with GitHub Pages your website will be available at:
-
-https://vajar-krish.github.io/krish-portfolio
-
----
-
-# ✨ Features
-
-* Futuristic Glassmorphism UI
-* Animated Particle Background
-* Smooth Scroll Animations
-* Interactive Project Cards
-* Skills Progress Bars
-* Education Timeline
-* Events & Hackathons Section
-* Social Media Integration
-* Contact Form Interface
-* Fully Responsive Design
+• Glassmorphism UI Design
+• Animated Particle Background
+• Interactive Project Cards
+• Smooth Scroll Animations
+• Skills Progress Visualization
+• Timeline Based Education Section
+• Hackathon & Event Showcase
+• Social Media Integration
+• Contact Form UI
 
 ---
 
-# 🧠 Website Sections
-
-### 👤 Hero Section
-
-Personal introduction with animated avatar and modern UI.
-
-### 🧑‍💻 About
-
-Overview of my passion for technology and innovation.
-
-### 🎓 Education
-
-Timeline view of my academic journey.
-
-### ⚡ Skills
-
-Technical skills visualized with animated progress bars.
-
-### 🏆 Events & Experience
-
-Hackathons, workshops and major technical milestones.
-
-### 🚀 Projects
-
-Interactive project showcase with flip animation cards.
-
-### 🌍 Social Links
-
-Direct access to GitHub, LinkedIn and Instagram.
-
-### 📩 Contact
-
-Contact form interface for collaboration or communication.
-
----
-
-# 🛠 Tech Stack
+## 🛠 Tech Stack
 
 Frontend
 
@@ -86,46 +39,41 @@ Libraries
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
-portfolio/
+```
+portfolio
 │
 ├── index.html
 ├── style.css
 ├── script.js
-│
-└── assets/
-└── images
+```
 
 ---
 
-# 🚀 Installation
+## 🚀 Installation
 
 Clone the repository
 
+```
 git clone https://github.com/vajar-krish/krish-portfolio.git
+```
 
-Open project folder
+Open project
 
+```
 cd krish-portfolio
+```
 
-Run the project
+Run project
 
-Open **index.html** in your browser.
-
----
-
-# 📈 Future Improvements
-
-* Dark / Light Theme Toggle
-* Blog Section
-* Dynamic Project Loading
-* Backend Contact Form
-* Portfolio Analytics
+```
+index.html
+```
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
 Krish Vajar
 Computer Engineering Student
@@ -135,9 +83,3 @@ https://github.com/vajar-krish
 
 Instagram
 https://www.instagram.com/krish.vajar
-
----
-
-# ⭐ Support
-
-If you like this project please give it a **star ⭐ on GitHub**.
